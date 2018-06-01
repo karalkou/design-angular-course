@@ -1,0 +1,250 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Open Sans', sans-serif
+	overflow-x: hidden
+ul,
+li
+	margin: 0
+	padding: 0
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+::-webkit-input-placeholder
+	font-size: 13px
+	color: #adadad
+
+::-moz-placeholder
+	color: #adadad
+	font-size: 13px
+
+header
+	padding-top: 95px
+	.header-wrap
+		width: 100%
+		padding-bottom: 75px
+		border-bottom: 2px solid #000
+	.search-wrapper
+		width: 100%
+		position: relative
+		input
+			width: 100%
+			height: 34px
+			background: $grey
+			border: none
+			padding: 0 50px 0 20px
+			outline: none
+		button
+			position: absolute
+			right: 5px
+			top: 50%
+			font-size: 16px
+			color: #b9b7bb
+			transform: translatey(-50%)
+			background: transparent
+			border: none
+			outline: none
+			cursor: pointer
+	.cart-wrapper
+		display: inline-flex
+		flex-direction: row
+		justify-content: flex-end
+		width: 100%
+		text-align: right
+		font-size: 16px
+		position: relative
+		.cart-link
+			display: inline-block
+			position: relative
+			margin-left: 20px
+			text-transform: uppercase
+			cursor: pointer
+			transition: all 0.3s ease
+			&:before
+				content: ''
+				width: 100%
+				height: 1px
+				background: #000
+				top: 100%
+				position: absolute
+				left: 0
+			span
+				color: $violet
+			&:hover
+				color: $violet
+				&:before
+					background: $violet
+		.cart
+			display: none
+			flex-direction: column
+			padding: 30px
+			position: absolute
+			z-index: 10
+			right: 0
+			top: calc(100% + 10px)
+			background: #fff
+			width: 300px
+			box-shadow: 0 0 6px 1px rgba(11,65,102, 0.6)
+			.items-cart-wrapper
+				width: 100%
+				list-style: none
+				border-bottom: 1px solid #000
+				margin-bottom: 15px
+				.item-wrapper
+					display: inline-flex
+					width: 100%
+					align-items: flex-start
+					position: relative
+					margin-bottom: 10px
+					li
+						list-style: none
+					.img-wrapper
+						min-width: 58px
+						min-height: 67px
+						margin-right: 17px
+						img
+							max-width: 58px
+							max-height: 67px
+					.date
+						text-align: left
+						.name
+							font-size: 16px
+							text-transform: uppercase
+							font-weight: bold
+							line-height: 1.2em
+						.count
+							font-size: 13px
+							span
+								display: inline-block
+								margin-right: 5px
+								&:last-child
+									margin-right: 0
+						.prices
+							font-size: 12px
+							color: #d72121
+							font-weight: bold
+					.delete
+						position: absolute
+						right: 0
+						top: 0
+						color: #d72121
+						cursor: pointer
+			.summ
+				text-align: left
+				width: 100%
+				font-weight: bold
+				font-size: 18px
+				color: #d91313
+			&.open
+				display: inline-flex
+main
+	padding-top: 150px
+	.item-wrapper
+		width: 100%
+		max-width: 296px
+		margin-bottom: 50px
+		.img-wrapper
+			margin-bottom: 20px
+		.name
+			font-size: 20px
+			margin-bottom: 5px
+		.code
+			font-size: 16px
+			strong
+				font-weight: bold
+		.prices
+			font-size: 16px
+			margin-bottom: 30px
+			strong
+				font-weight: bold
+		button
+			width: 140px
+			font-size: 16px
+			line-height: 32px
+			background: $violet
+			color: #fff
+			border: none
+			cursor: pointer
+
+	.text-wrapper
+		background: #f5f3f5
+		padding: 50px 0
+		h3
+			color: $violet
+			font-size: 24px
+			width: 100%
+			text-align: center
+			margin-bottom: 40px
+			span
+				display: inline-block
+				font-weight: bolder
+				text-transform: uppercase
+				color: #807e80
+		p
+			font-weight: lighter
+			font-size: 16px
+			color: #000
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+
+footer
+	background: #2c2c2c
+	color: #a7a7a7
+	text-align: center
+	font-size: 12px
+	line-height: 1.2em
+	padding: 10px 0
+
+@import "media" // Всегда в конце
