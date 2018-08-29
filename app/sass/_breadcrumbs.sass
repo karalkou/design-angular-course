@@ -1,0 +1,20 @@
+.breadcrumbs
+  list-style: none
+  font-size: 0
+  margin-bottom: 40px
+  li
+    font-size: 12px
+    margin-right: 25px
+    color: #999999
+    text-transform: uppercase
+    display: inline-block
+    position: relative
+    &:before
+      content: '>'
+      position: absolute
+      right: -18px
+    &:last-child
+      margin-right: 0
+      color: #000
+      &:before
+        display: none
