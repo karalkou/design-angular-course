@@ -74,7 +74,7 @@ li
 /*header global styles*/
 
 header
-	padding-top: 95px
+	padding-top: 10px
 	.header-wrap
 		width: 100%
 		padding-bottom: 75px
@@ -285,7 +285,24 @@ header
 		&:last-child
 			margin-bottom: 0
 
-/*bottom text block styles end*/
+.top-nav-wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	margin-bottom: 40px
+	ul
+		display: inline-flex
+		flex-direction: row
+		list-style: none
+		li
+			margin-left: 20px
+			a
+				font-size: 14px
+				font-weight: 400
+				text-decoration: none
+				color: #000
+				&:hover
+					color: $violet
 
 
 /*footer styles*/
@@ -298,6 +315,7 @@ footer
 	padding: 10px 0
 
 /*footer styles end*/
+@import "registration"
 @import "product-page"
 @import "breadcrumbs"
 @import "pop-up"
